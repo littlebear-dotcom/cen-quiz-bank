@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cen Quiz Bank - วิทยาศาสตร์</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#202735;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans Thai",sans-serif}.wrap{max-width:540px;margin:auto;padding:16px;min-height:100vh}
+.top{background:#fff;border-radius:25px;padding:20px;box-shadow:0 5px 20px #0000000b;margin-bottom:14px}.brand{display:flex;align-items:center;gap:12px}.icon{width:52px;height:52px;border-radius:17px;background:#e8f7ef;display:grid;place-items:center;font-size:27px}h1{margin:0;font-size:25px}.muted{color:#737b88;font-size:13px;margin-top:3px}
+.sheet{display:block;width:100%;border:0;font:inherit;text-align:left;background:#fff;border-radius:21px;padding:17px;margin:11px 0;box-shadow:0 4px 16px #00000009;cursor:pointer;border:2px solid transparent}.sheet:active{transform:scale(.99);outline:none}.row{display:flex;gap:12px;align-items:center}.num{width:42px;height:42px;border-radius:13px;background:#eef4ff;display:grid;place-items:center;font-weight:900;color:#3565c7}.title{font-weight:800;font-size:17px;line-height:1.35}.meta{font-size:12px;color:#818895;margin-top:4px}.pill{margin-left:auto;background:#eef8f2;color:#19724a;padding:6px 9px;border-radius:99px;font-size:12px;font-weight:800}
+.hidden{display:none}.back{border:0;background:none;padding:0;color:#19724a;font-weight:800;font-size:15px;margin-bottom:12px;cursor:pointer}.card{background:#fff;border-radius:22px;padding:18px;box-shadow:0 4px 18px #0000000b}.tag{display:inline-block;background:#e8f7ef;color:#19724a;padding:6px 10px;border-radius:99px;font-size:12px;font-weight:800}.qno{margin-top:14px;font-weight:900;color:#19724a}.progress{height:9px;background:#e5e7eb;border-radius:99px;overflow:hidden;margin:8px 0 18px}.bar{height:100%;background:#38a169;transition:.3s}.question{font-size:18px;font-weight:750;line-height:1.55;margin-bottom:16px}.opt{width:100%;text-align:left;background:#fff;border:2px solid #e4e7eb;border-radius:15px;padding:13px;margin:9px 0;font-size:15px;cursor:pointer}.opt.correct{border-color:#38a169;background:#ebf8f0}.opt.wrong{border-color:#df5a5a;background:#fff0f0}.feedback{display:none;border-radius:14px;padding:12px;margin-top:10px;line-height:1.55;font-size:14px}.feedback.show{display:block}.ok{background:#eaf8f0;color:#17663f}.bad{background:#fff0f0;color:#922d2d}.btn{width:100%;border:0;border-radius:15px;background:#19724a;color:white;font-size:17px;font-weight:900;padding:14px;margin-top:13px;cursor:pointer}.btn:disabled{opacity:.4}.score{text-align:center;padding:12px}.big{font-size:48px;font-weight:950;color:#19724a}.wronglist{text-align:left;background:#fff6e8;border-radius:15px;padding:12px;margin-top:15px;font-size:14px}.linkbtn{background:#eef4ff;color:#315fb6}.sectiontitle{font-size:15px;font-weight:900;margin:19px 2px 8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div id="home">
+ <div class="top">
+  <div class="brand"><div class="icon">🔬</div><div><h1>วิทยาศาสตร์</h1><div class="muted">Cen Quiz Bank • คลังชีทวิทยาศาสตร์</div></div></div>
+ </div>
+ <div class="sectiontitle">📚 ชีททั้งหมด</div>
+ <button class="sheet" type="button" onclick="openSheet()" aria-label="เปิดชีท 01">
+<div class="row"><div class="num">01</div><div style="text-align:left"><div class="title">แรงและการเคลื่อนที่ของวัตถุ</div><div class="meta">แบบฝึกหัดที่ 6 • Exclusive ชุดที่ 6 • 3 หน้า</div></div><div class="pill">5 ข้อ</div></div>
+</button>
+ <div class="sheet" style="opacity:.55"><div class="row"><div class="num">02</div><div><div class="title">รอชีทถัดไป...</div><div class="meta">ส่งชีทใหม่มา แล้วเพิ่มต่อได้เลย</div></div><div class="pill">—</div></div></div>
+ <div class="top" style="margin-top:18px"><b>📊 ความคืบหน้า</b><div class="muted" style="margin-top:7px">Sheet 01 • ยังไม่ได้ทำ</div></div>
+</div>
+<div id="quizPage" class="hidden"></div>
+</div>
+<script>
+const qs=[
+{q:"การเคลื่อนที่ของวัตถุในตัวเลือกใดเกิดจากแรงที่แตกต่างจากตัวเลือกอื่น",o:["การออกแรงผลักประตู","การยกกล่องกระดาษขึ้นไปไว้บนตู้","การใช้รถลากมาลากรถที่จอดเสียข้างถนน","การที่ดาวเทียมโคจรรอบโลก"],a:3,e:"ดาวเทียมโคจรรอบโลกเกี่ยวข้องกับแรงโน้มถ่วง ซึ่งเป็นแรงไม่สัมผัส ส่วนข้ออื่นเป็นการออกแรงโดยการสัมผัส"},
+{q:"ตัวเลือกใดเป็นการใช้ประโยชน์จากแรงไม่สัมผัส",o:["การยิงปืน","การเคลื่อนที่ของเข็มนาฬิกา","การใช้แม่เหล็กดูดผงเหล็กที่ผสมในทราย","การทำน้ำแข็ง"],a:2,e:"แม่เหล็กสามารถออกแรงดึงดูดผงเหล็กได้โดยไม่ต้องสัมผัส"},
+{q:"ลูกฟุตบอลกลิ้งมาในทิศทางขวาไปซ้าย บุคคลในตัวเลือกใดสามารถทำให้ลูกฟุตบอลเคลื่อนที่ได้เร็วขึ้น",o:["ม่อน – เตะลูกฟุตบอลในทิศทางจากซ้ายไปขวา","มาร์ค – เตะลูกฟุตบอลในทิศทางจากขวาไปซ้าย","มิว – เตะลูกฟุตบอลในทิศตั้งฉากกับทิศทางที่ลูกบอลเคลื่อนที่มา","นอส – เตะลูกฟุตบอลในทิศทางจากบนลงล่าง"],a:1,e:"การออกแรงในทิศเดียวกับการเคลื่อนที่เดิมจะทำให้ลูกฟุตบอลเคลื่อนที่เร็วขึ้น"},
+{q:"ลูกฟุตบอลเคลื่อนที่มาจากทางซ้ายไปขวา ถ้าเตะออกแรงกระทำต่อลูกฟุตบอลในช่วงเวลาสั้น ๆ ในทิศทางจากขวาไปซ้าย ตัวเลือกใดไม่มีโอกาสเกิดขึ้น",o:["ลูกฟุตบอลเคลื่อนที่ในทิศทางเดิมเร็วขึ้น","ลูกฟุตบอลเคลื่อนที่ไปทิศทางเดิมช้าลง","ลูกฟุตบอลเคลื่อนที่ไปในทิศทางตรงข้าม","ลูกฟุตบอลหยุดการเคลื่อนที่"],a:0,e:"แรงที่เตะสวนทิศทางการเคลื่อนที่เดิมไม่ทำให้ลูกฟุตบอลเคลื่อนที่เร็วขึ้นในทิศเดิม"},
+{q:"บอมและโบว์ออกแรงขนาดเท่ากันกระทำต่อโต๊ะ ตัวเลือกใดแสดงการออกแรงที่ทำให้โต๊ะมีทิศทางการเคลื่อนที่แตกต่างจากตัวเลือกอื่น",o:["ข้อ 1","ข้อ 2","ข้อ 3","ข้อ 4"],a:3,e:"ในข้อ 4 แรงที่กระทำต่อโต๊ะมีทิศทางเดียวกัน จึงแตกต่างจากกรณีอื่น"}
+];
+let i=0,score=0,answered=false,wrong=[];
+function openSheet(){document.getElementById('home').classList.add('hidden');document.getElementById('quizPage').classList.remove('hidden');i=0;score=0;wrong=[];answered=false;render();}
+function home(){document.getElementById('quizPage').classList.add('hidden');document.getElementById('home').classList.remove('hidden');}
+function render(){let x=qs[i];document.getElementById('quizPage').innerHTML=`
+<button class="back" onclick="home()">‹ กลับไปวิทยาศาสตร์</button>
+<div class="card"><span class="tag">📘 Sheet 01</span>
+<div class="qno">ข้อ ${i+1} / ${qs.length}</div>
+<div class="progress"><div class="bar" style="width:${(i+1)/qs.length*100}%"></div></div>
+<div class="question">${x.q}</div>
+${x.o.map((v,j)=>`<button class="opt" id="o${j}" onclick="answer(${j})">${j+1}. ${v}</button>`).join('')}
+<div id="fb" class="feedback"></div>
+<button id="next" class="btn" onclick="next()" disabled>${i===qs.length-1?'ดูคะแนน':'ข้อถัดไป'}</button>
+</div>`}
+function answer(j){if(answered)return;answered=true;document.querySelectorAll('.opt').forEach(b=>b.disabled=true);let fb=document.getElementById('fb');if(j===qs[i].a){score++;document.getElementById('o'+j).classList.add('correct');fb.className='feedback show ok';fb.innerHTML='✅ <b>ถูกต้อง!</b><br>'+qs[i].e}else{wrong.push(i);document.getElementById('o'+j).classList.add('wrong');document.getElementById('o'+qs[i].a).classList.add('correct');fb.className='feedback show bad';fb.innerHTML='❌ <b>ยังไม่ถูก</b><br>คำตอบที่ถูกคือ <b>'+ (qs[i].a+1)+'. '+qs[i].o[qs[i].a]+'</b><br>'+qs[i].e}document.getElementById('next').disabled=false}
+function next(){if(i<qs.length-1){i++;answered=false;render()}else result()}
+function result(){document.getElementById('quizPage').innerHTML=`<button class="back" onclick="home()">‹ กลับไปวิทยาศาสตร์</button><div class="card score"><div class="tag">📘 Sheet 01 • เสร็จแล้ว</div><div class="big">${score}/${qs.length}</div><h2>${score===qs.length?'🎉 เยี่ยมมาก!':'ทำเสร็จแล้ว!'}</h2><div class="muted">ระบบบันทึกผลของรอบนี้ไว้สำหรับทบทวน</div>${wrong.length?`<div class="wronglist"><b>📝 ข้อที่ควรทบทวน</b><br>${wrong.map(n=>'ข้อ '+(n+1)).join(' • ')}</div>`:'<div class="wronglist" style="background:#eaf8f0">🌟 ไม่มีข้อผิดพลาดในรอบนี้</div>'}<button class="btn" onclick="openSheet()">ทำชีทนี้อีกครั้ง</button><button class="btn linkbtn" onclick="home()">กลับหน้าคลัง Science</button></div>`}
+</script>
+</body></html>
